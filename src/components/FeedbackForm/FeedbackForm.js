@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import DatePicker from "react-datepicker";
 
+import "react-datepicker/dist/react-datepicker.css";
+
+// import Calendar from "../Calendar/Calendar";
 import s from "./FeedbackForm.module.css";
 
 function FeedbackForm() {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
+  const [date, setDate] = useState(new Date());
+  const handleCalendarClose = () => console.log("Calendar closed");
+  const handleCalendarOpen = () => console.log("Calendar opened");
 
   // reset = () => {
   //   this.setState({ name: "", email: "" });
@@ -41,6 +48,16 @@ function FeedbackForm() {
           {...register("email")}
         />
       </label>
+      <p>Дата останнього візиту в клініку:</p>
+      {/* <Calendar /> */}
+      <div {...register("date")}>
+        <DatePicker
+          selected={date}
+          onChange={(date) => setDate(date)}
+          onCalendarClose={handleCalendarClose}
+          onCalendarOpen={handleCalendarOpen}
+        />
+      </div>
       <select {...register("clinic")}>
         <option value="choiseClinic">Виберіть адресу клініки</option>
         <option value="Hodosivka">Ходосівка</option>
@@ -200,6 +217,325 @@ function FeedbackForm() {
           />
         </label>
       </section>
+      <h2>Оцініть роботу лікаря:</h2>
+      <label>
+        Зазначте ПІБ лікаря
+        <input
+          // value={name}
+          type="text"
+          name="nameDoctor"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Имя может состоять только из букв, апострофа, тире и пробелов."
+          required
+          placeholder="ПІБ лікаря"
+          // onChange={handleContactData}
+          {...register("nameDoctor")}
+        />
+      </label>
+      <section>
+        <p>- чи був лікар уважним до Ваших скарг?</p>
+        <label>
+          {" 1 "}
+          <input
+            type="radio"
+            name="carefulDoctor"
+            value="1"
+            {...register("carefulDoctor")}
+          />
+        </label>
+        <label>
+          {" 2 "}
+          <input
+            type="radio"
+            name="carefulDoctor"
+            value="2"
+            {...register("carefulDoctor")}
+          />
+        </label>
+        <label>
+          {" 3 "}
+          <input
+            type="radio"
+            name="carefulDoctor"
+            value="3"
+            {...register("carefulDoctor")}
+          />
+        </label>
+        <label>
+          {" 4 "}
+          <input
+            type="radio"
+            name="carefulDoctor"
+            value="4"
+            {...register("carefulDoctor")}
+          />
+        </label>
+        <label>
+          {" 5 "}
+          <input
+            type="radio"
+            name="carefulDoctor"
+            value="5"
+            {...register("carefulDoctor")}
+          />
+        </label>
+      </section>
+      <section>
+        <p>- чи надав лікар вичерпний коментар при оцінці Вашого стану?</p>
+        <label>
+          {" 1 "}
+          <input
+            type="radio"
+            name="ordersDoctor"
+            value="1"
+            {...register("ordersDoctor")}
+          />
+        </label>
+        <label>
+          {" 2 "}
+          <input
+            type="radio"
+            name="ordersDoctor"
+            value="2"
+            {...register("ordersDoctor")}
+          />
+        </label>
+        <label>
+          {" 3 "}
+          <input
+            type="radio"
+            name="ordersDoctor"
+            value="3"
+            {...register("ordersDoctor")}
+          />
+        </label>
+        <label>
+          {" 4 "}
+          <input
+            type="radio"
+            name="ordersDoctor"
+            value="4"
+            {...register("ordersDoctor")}
+          />
+        </label>
+        <label>
+          {" 5 "}
+          <input
+            type="radio"
+            name="ordersDoctor"
+            value="5"
+            {...register("ordersDoctor")}
+          />
+        </label>
+      </section>
+      <section>
+        <p>- чи надав лікар вичерпний коментар до своїх призначень?</p>
+        <label>
+          {" 1 "}
+          <input
+            type="radio"
+            name="prescriptionDoctor"
+            value="1"
+            {...register("prescriptionDoctor")}
+          />
+        </label>
+        <label>
+          {" 2 "}
+          <input
+            type="radio"
+            name="prescriptionDoctor"
+            value="2"
+            {...register("prescriptionDoctor")}
+          />
+        </label>
+        <label>
+          {" 3 "}
+          <input
+            type="radio"
+            name="prescriptionDoctor"
+            value="3"
+            {...register("prescriptionDoctor")}
+          />
+        </label>
+        <label>
+          {" 4 "}
+          <input
+            type="radio"
+            name="prescriptionDoctor"
+            value="4"
+            {...register("prescriptionDoctor")}
+          />
+        </label>
+        <label>
+          {" 5 "}
+          <input
+            type="radio"
+            name="prescriptionDoctor"
+            value="5"
+            {...register("prescriptionDoctor")}
+          />
+        </label>
+      </section>
+      <section>
+        <p>- чи був лікар ввічливим?</p>
+        <label>
+          {" 1 "}
+          <input
+            type="radio"
+            name="respectfulDoctor"
+            value="1"
+            {...register("respectfulDoctor")}
+          />
+        </label>
+        <label>
+          {" 2 "}
+          <input
+            type="radio"
+            name="respectfulDoctor"
+            value="2"
+            {...register("respectfulDoctor")}
+          />
+        </label>
+        <label>
+          {" 3 "}
+          <input
+            type="radio"
+            name="respectfulDoctor"
+            value="3"
+            {...register("respectfulDoctor")}
+          />
+        </label>
+        <label>
+          {" 4 "}
+          <input
+            type="radio"
+            name="respectfulDoctor"
+            value="4"
+            {...register("respectfulDoctor")}
+          />
+        </label>
+        <label>
+          {" 5 "}
+          <input
+            type="radio"
+            name="respectfulDoctor"
+            value="5"
+            {...register("respectfulDoctor")}
+          />
+        </label>
+      </section>
+      <h2>Оцініть порядок прийому та умови клініки:</h2>
+      <section>
+        <p>- чи був Ваш прийом добре організованим?</p>
+        <label>
+          {" 1 "}
+          <input
+            type="radio"
+            name="clinicOrganisation"
+            value="1"
+            {...register("clinicOrganisation")}
+          />
+        </label>
+        <label>
+          {" 2 "}
+          <input
+            type="radio"
+            name="clinicOrganisation"
+            value="2"
+            {...register("clinicOrganisation")}
+          />
+        </label>
+        <label>
+          {" 3 "}
+          <input
+            type="radio"
+            name="clinicOrganisation"
+            value="3"
+            {...register("clinicOrganisation")}
+          />
+        </label>
+        <label>
+          {" 4 "}
+          <input
+            type="radio"
+            name="clinicOrganisation"
+            value="4"
+            {...register("clinicOrganisation")}
+          />
+        </label>
+        <label>
+          {" 5 "}
+          <input
+            type="radio"
+            name="clinicOrganisation"
+            value="5"
+            {...register("clinicOrganisation")}
+          />
+        </label>
+      </section>
+      <section>
+        <p>- чи було Ваше перебування в клініці зручним?</p>
+        <label>
+          {" 1 "}
+          <input
+            type="radio"
+            name="clinicStay"
+            value="1"
+            {...register("clinicStay")}
+          />
+        </label>
+        <label>
+          {" 2 "}
+          <input
+            type="radio"
+            name="clinicStay"
+            value="2"
+            {...register("clinicStay")}
+          />
+        </label>
+        <label>
+          {" 3 "}
+          <input
+            type="radio"
+            name="clinicStay"
+            value="3"
+            {...register("clinicStay")}
+          />
+        </label>
+        <label>
+          {" 4 "}
+          <input
+            type="radio"
+            name="clinicStay"
+            value="4"
+            {...register("clinicStay")}
+          />
+        </label>
+        <label>
+          {" 5 "}
+          <input
+            type="radio"
+            name="clinicStay"
+            value="5"
+            {...register("clinicStay")}
+          />
+        </label>
+      </section>
+      <h2>Маєте ще щось сказати? Лишіть Ваш коментар:</h2>
+      <textarea
+        className={s.comment}
+        type="text"
+        name="comment"
+        rows="10"
+        cols="55"
+        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        title="Коментар может состоять только из букв, апострофа, тире и пробелов."
+        required
+        // readonly="true"
+        // readOnly={true}
+        placeholder="Лишіть Ваш коментар"
+        {...register("comment")}
+      ></textarea>
       <button type="submit">Отправить</button>
     </form>
   );
