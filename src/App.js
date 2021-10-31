@@ -1,6 +1,7 @@
+import React from "react";
 import Buttons from "./components/Buttons/Buttons";
 import FeedBackList from "./components/FeedbackList/FeedbackList";
-import FeedbackForm from "./components/FeedbackForm/FeedbackForm";
+import FormTest from "./components/FeedbackForm/FormTest";
 
 import "./App.css";
 
@@ -13,9 +14,9 @@ function App() {
     <div className="App">
       <h2>Вiдгуки</h2>
       <Buttons />
-      <FeedbackForm />
       {/* onSubmit={formSubmitHendler} */}
       <FeedBackList />
+      <FormTest />
     </div>
   );
 }
