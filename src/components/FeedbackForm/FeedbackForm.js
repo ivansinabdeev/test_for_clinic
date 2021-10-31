@@ -14,10 +14,6 @@ function FeedbackForm() {
   const handleCalendarClose = () => console.log("Calendar closed");
   const handleCalendarOpen = () => console.log("Calendar opened");
 
-  // reset = () => {
-  //   this.setState({ name: "", email: "" });
-  // };
-
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={s.Form}>
       <label>
@@ -531,9 +527,7 @@ function FeedbackForm() {
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         title="Коментар может состоять только из букв, апострофа, тире и пробелов."
         required
-        // readonly="true"
-        // readOnly={true}
-        placeholder="Лишіть Ваш коментар"
+        placeholder="Будь ласка, лишіть Ваш коментар"
         {...register("comment")}
       ></textarea>
       <button type="submit">Отправить</button>
