@@ -1,2 +1,2 @@
-export const getContacts = (state) => state.phonebook.contacts;
-export const getFilter = (state) => state.phonebook.filter;
+export const getComments = (state) => state.comment.comments;
+export const getFilter = (state) => state.comment.filter;

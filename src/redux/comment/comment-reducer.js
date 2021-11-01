@@ -1,18 +1,18 @@
 import { combineReducers } from "redux";
 
 import { createReducer } from "@reduxjs/toolkit";
-import actions from "./phonebook-actions";
+import actions from "./comment-actions";
 
-const contacts = createReducer([], {
-  [actions.addContact]: (state, { payload }) => {
-    const contacts = [...state, payload];
+const comments = createReducer([], {
+  [actions.addComment]: (state, { payload }) => {
+    const comment = [...state, payload];
 
-    return contacts;
+    return comment;
   },
-  [actions.deleteContact]: (state, { payload }) => {
-    const contacts = state.filter(({ id }) => id !== payload);
+  [actions.deleteComment]: (state, { payload }) => {
+    const comment = state.filter(({ id }) => id !== payload);
 
-    return [...contacts];
+    return [...comment];
   },
 });
 const filter = createReducer("", {
@@ -20,6 +20,6 @@ const filter = createReducer("", {
 });
 
 export default combineReducers({
-  contacts,
+  comments,
   filter,
 });

@@ -1,16 +1,18 @@
 import { v4 as uuidv4 } from "uuid";
 import { createAction } from "@reduxjs/toolkit";
 
-const addContact = createAction("phonebook/add", (input) => ({
+const addComment = createAction("comment/add", (input) => ({
   payload: {
     id: uuidv4(),
     name: input.name,
-    number: input.number,
+    comment: input.comment,
+    date: input.date,
+    clinic: input.clinic,
   },
 }));
-const getContacts = createAction("phonebook/get");
-const deleteContact = createAction("phonebook/delete");
-const changeFilter = createAction("phonebook/changeFilter");
+const getComments = createAction("comment/get");
+const deleteComment = createAction("comment/delete");
+const changeFilter = createAction("comment/changeFilter");
 
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
-export default { addContact, deleteContact, changeFilter, getContacts };
+export default { addComment, deleteComment, changeFilter, getComments };

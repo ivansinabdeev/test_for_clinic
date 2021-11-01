@@ -2,20 +2,72 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import DatePicker from "react-datepicker";
 
+import { useSelector, useDispatch } from "react-redux";
+import commentActions from "../../redux/comment/comment-actions";
+import { getComments } from "../../redux/comment/comment-selectors";
+
 import "react-datepicker/dist/react-datepicker.css";
 
 // import Calendar from "../Calendar/Calendar";
 import s from "./FeedbackForm.module.css";
 
 function FeedbackForm() {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { register } = useForm();
+  // const onSubmit = (data) => console.log(data);
+
+  const [name, setName] = useState("");
+  const [comment, setComment] = useState("");
+  // const [date, setDate] = useState("");
+  const [clinic, setClinic] = useState("");
+  const comments = useSelector(getComments);
+  const dispatch = useDispatch();
+
+  // const handleContactData = (e) => {
+  //   const { name, value } = e.target;
+  //   switch (name) {
+  //     case "name":
+  //       setName(value);
+  //       break;
+
+  //     case "number":
+  //       setNumber(value);
+  //       break;
+
+  //     default:
+  //       return;
+  //   }
+  // };
+
+  const checkExistAndAdd = (newComment) => {
+    comments.some(
+      (comment) =>
+        comment.name.toLocaleLowerCase() ===
+          newComment.name.toLocaleLowerCase() ||
+        comments.some((comment) => comment.comment === newComment.comment) ||
+        comments.some((comment) => comment.clinic === newComment.clinic) ||
+        comments.some((comment) => comment.date === newComment.date)
+    );
+    // ? alert(
+    //     `Friend ${newContact.name} or number ${newContact.number} is alredy exist`
+    //   )
+    dispatch(commentActions.addComment(newComment));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    checkExistAndAdd({ name, comment, clinic, date });
+    setName("");
+    setComment("");
+    setClinic("");
+    setDate("");
+  };
+
   const [date, setDate] = useState(new Date());
   const handleCalendarClose = () => console.log("Calendar closed");
   const handleCalendarOpen = () => console.log("Calendar opened");
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={s.Form}>
+    <form onSubmit={handleSubmit} className={s.Form}>
       <label>
         Ваше ім’я та прізвище
         <input
