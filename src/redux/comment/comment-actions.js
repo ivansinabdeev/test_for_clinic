@@ -6,7 +6,6 @@ const addComment = createAction("comment/add", (input) => ({
     id: uuidv4(),
     name: input.name,
     comment: input.comment,
-    date: input.date,
     clinic: input.clinic,
   },
 }));

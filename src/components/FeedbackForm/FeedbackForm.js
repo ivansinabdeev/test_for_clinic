@@ -8,35 +8,35 @@ import { getComments } from "../../redux/comment/comment-selectors";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-// import Calendar from "../Calendar/Calendar";
 import s from "./FeedbackForm.module.css";
 
 function FeedbackForm() {
   const { register } = useForm();
-  // const onSubmit = (data) => console.log(data);
+  // const onSubmit = (data) =>
+  // console.log(data);
 
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
-  // const [date, setDate] = useState("");
+  const [date, setDate] = useState("");
   const [clinic, setClinic] = useState("");
   const comments = useSelector(getComments);
   const dispatch = useDispatch();
 
-  // const handleContactData = (e) => {
-  //   const { name, value } = e.target;
-  //   switch (name) {
-  //     case "name":
-  //       setName(value);
-  //       break;
+  const handleContactData = (e) => {
+    const { name, value } = e.target;
+    switch (name) {
+      case "name":
+        setName(value);
+        break;
 
-  //     case "number":
-  //       setNumber(value);
-  //       break;
+      case "comment":
+        setComment(value);
+        break;
 
-  //     default:
-  //       return;
-  //   }
-  // };
+      default:
+        return;
+    }
+  };
 
   const checkExistAndAdd = (newComment) => {
     comments.some(
@@ -62,7 +62,7 @@ function FeedbackForm() {
     setDate("");
   };
 
-  const [date, setDate] = useState(new Date());
+  // const [date, setDate] = useState(new Date());
   const handleCalendarClose = () => console.log("Calendar closed");
   const handleCalendarOpen = () => console.log("Calendar opened");
 
@@ -78,7 +78,7 @@ function FeedbackForm() {
           title="Имя может состоять только из букв, апострофа, тире и пробелов."
           required
           placeholder="Имя и Фамилия"
-          // onChange={handleContactData}
+          onChange={handleContactData}
           {...register("name")}
         />
       </label>
@@ -106,7 +106,7 @@ function FeedbackForm() {
           onCalendarOpen={handleCalendarOpen}
         />
       </div>
-      <select {...register("clinic")}>
+      <select {...register("clinic")} onChange={handleContactData}>
         <option value="choiseClinic">Виберіть адресу клініки</option>
         <option value="Hodosivka">Ходосівка</option>
         <option value="Kapitanivka">Капітанівка</option>
@@ -580,6 +580,7 @@ function FeedbackForm() {
         title="Коментар может состоять только из букв, апострофа, тире и пробелов."
         required
         placeholder="Будь ласка, лишіть Ваш коментар"
+        onChange={handleContactData}
         {...register("comment")}
       ></textarea>
       <button type="submit">Отправить</button>

@@ -15,6 +15,7 @@ export default function FeedbackList() {
 
   return (
     <ul>
+      <h2>Список коментов</h2>
       {filteredComments.map(({ id, name, comment, date, clinic }) => (
         <li key={id}>
           {name}: {comment} :{date} : {clinic}
