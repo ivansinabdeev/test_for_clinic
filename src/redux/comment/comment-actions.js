@@ -23,10 +23,19 @@ const addContact = createAction("comment/add", (input) => ({
   payload: {
     id: uuidv4(),
     name: input.name,
-    number: input.number,
+    email: input.email,
     remark: input.remark,
     date: input.date,
     clinic: input.clinic,
+    registration: input.registration,
+    speedAdmin: input.speedAdmin,
+    niceAdmin: input.niceAdmin,
+    carefulDoctor: input.carefulDoctor,
+    ordersDoctor: input.ordersDoctor,
+    prescriptionDoctor: input.prescriptionDoctor,
+    respectfulDoctor: input.respectfulDoctor,
+    clinicOrganisation: input.clinicOrganisation,
+    clinicStay: input.clinicStay,
   },
 }));
 const getContacts = createAction("comment/get");

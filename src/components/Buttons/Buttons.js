@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FeedbackForm from "../FeedbackForm/FeedbackForm";
+import Filter from "../Filter/Filter";
 import Modal from "../Modal/Modal";
 
 // import s from "./Buttons.module.css";
@@ -7,6 +8,7 @@ import Modal from "../Modal/Modal";
 class Buttons extends Component {
   state = {
     showModal: false,
+    showed: false,
   };
 
   toggleModal = () => {
@@ -31,7 +33,14 @@ class Buttons extends Component {
             </button>
           </Modal>
         )}
-        <button>Клiнiка</button>
+        <button
+          onClick={() => {
+            this.setState({ showed: !this.state.showed });
+          }}
+        >
+          Клiнiка
+        </button>
+        {this.state.showed ? <Filter /> : null}
       </nav>
     );
   }

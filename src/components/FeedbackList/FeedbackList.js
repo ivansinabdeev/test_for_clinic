@@ -51,9 +51,9 @@ export default function ContactList() {
 
   return (
     <ul>
-      {filteredContacts.map(({ id, name, number, remark, date, clinic }) => (
+      {filteredContacts.map(({ id, name, remark, date, clinic }) => (
         <li key={id}>
-          {name} : {number} : {remark} : {date} :{clinic}
+          {name} : {remark} : {date} :{clinic}
           <button
             // className={s.buttonDelete}
             type="button"

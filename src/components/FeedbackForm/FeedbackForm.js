@@ -106,159 +106,6 @@
 //         <option value="Kapitanivka">Капітанівка</option>
 //       </select>
 
-//       <section>
-//         <p>
-//           Як швидко Вам вдалося зв’язатися з клінікою та/чи записатися на
-//           прийом?
-//         </p>
-//         <label>
-//           {" 1 "}
-//           <input
-//             type="radio"
-//             name="registration"
-//             value="1"
-//             // checked={this.registration === 1}
-//             {...register("registration")}
-//           />
-//         </label>
-//         <label>
-//           {" 2 "}
-//           <input
-//             type="radio"
-//             name="registration"
-//             value="2"
-//             // checked={this.registration === 2}
-//             {...register("registration")}
-//           />
-//         </label>
-//         <label>
-//           {" 3 "}
-//           <input
-//             type="radio"
-//             name="registration"
-//             value="3"
-//             // checked={this.registration === 3}
-//             {...register("registration")}
-//           />
-//         </label>
-//         <label>
-//           {" 4 "}
-//           <input
-//             type="radio"
-//             name="registration"
-//             value="4"
-//             // checked={this.registration === 4}
-//             {...register("registration")}
-//           />
-//         </label>
-//         <label>
-//           {" 5 "}
-//           <input
-//             type="radio"
-//             name="registration"
-//             value="5"
-//             // checked={this.registration === 5}
-//             {...register("registration")}
-//           />
-//         </label>
-//       </section>
-//       <h2>Оцініть роботу рецепції:</h2>
-//       <section>
-//         <p>- швидкість та точність роботи адміністратора?</p>
-//         <label>
-//           {" 1 "}
-//           <input
-//             type="radio"
-//             name="speedAdmin"
-//             value="1"
-//             {...register("speedAdmin")}
-//           />
-//         </label>
-//         <label>
-//           {" 2 "}
-//           <input
-//             type="radio"
-//             name="speedAdmin"
-//             value="2"
-//             {...register("speedAdmin")}
-//           />
-//         </label>
-//         <label>
-//           {" 3 "}
-//           <input
-//             type="radio"
-//             name="speedAdmin"
-//             value="3"
-//             {...register("speedAdmin")}
-//           />
-//         </label>
-//         <label>
-//           {" 4 "}
-//           <input
-//             type="radio"
-//             name="speedAdmin"
-//             value="4"
-//             {...register("speedAdmin")}
-//           />
-//         </label>
-//         <label>
-//           {" 5 "}
-//           <input
-//             type="radio"
-//             name="speedAdmin"
-//             value="5"
-//             {...register("speedAdmin")}
-//           />
-//         </label>
-//       </section>
-//       <section>
-//         <p>- чи був адміністратор ввічливим?</p>
-//         <label>
-//           {" 1 "}
-//           <input
-//             type="radio"
-//             name="niceAdmin"
-//             value="1"
-//             {...register("niceAdmin")}
-//           />
-//         </label>
-//         <label>
-//           {" 2 "}
-//           <input
-//             type="radio"
-//             name="niceAdmin"
-//             value="2"
-//             {...register("niceAdmin")}
-//           />
-//         </label>
-//         <label>
-//           {" 3 "}
-//           <input
-//             type="radio"
-//             name="niceAdmin"
-//             value="3"
-//             {...register("niceAdmin")}
-//           />
-//         </label>
-//         <label>
-//           {" 4 "}
-//           <input
-//             type="radio"
-//             name="niceAdmin"
-//             value="4"
-//             {...register("niceAdmin")}
-//           />
-//         </label>
-//         <label>
-//           {" 5 "}
-//           <input
-//             type="radio"
-//             name="niceAdmin"
-//             value="5"
-//             {...register("niceAdmin")}
-//           />
-//         </label>
-//       </section>
 //       <h2>Оцініть роботу лікаря:</h2>
 //       <label>
 //         Зазначте ПІБ лікаря
@@ -274,295 +121,7 @@
 //           {...register("nameDoctor")}
 //         />
 //       </label>
-//       <section>
-//         <p>- чи був лікар уважним до Ваших скарг?</p>
-//         <label>
-//           {" 1 "}
-//           <input
-//             type="radio"
-//             name="carefulDoctor"
-//             value="1"
-//             {...register("carefulDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 2 "}
-//           <input
-//             type="radio"
-//             name="carefulDoctor"
-//             value="2"
-//             {...register("carefulDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 3 "}
-//           <input
-//             type="radio"
-//             name="carefulDoctor"
-//             value="3"
-//             {...register("carefulDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 4 "}
-//           <input
-//             type="radio"
-//             name="carefulDoctor"
-//             value="4"
-//             {...register("carefulDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 5 "}
-//           <input
-//             type="radio"
-//             name="carefulDoctor"
-//             value="5"
-//             {...register("carefulDoctor")}
-//           />
-//         </label>
-//       </section>
-//       <section>
-//         <p>- чи надав лікар вичерпний коментар при оцінці Вашого стану?</p>
-//         <label>
-//           {" 1 "}
-//           <input
-//             type="radio"
-//             name="ordersDoctor"
-//             value="1"
-//             {...register("ordersDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 2 "}
-//           <input
-//             type="radio"
-//             name="ordersDoctor"
-//             value="2"
-//             {...register("ordersDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 3 "}
-//           <input
-//             type="radio"
-//             name="ordersDoctor"
-//             value="3"
-//             {...register("ordersDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 4 "}
-//           <input
-//             type="radio"
-//             name="ordersDoctor"
-//             value="4"
-//             {...register("ordersDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 5 "}
-//           <input
-//             type="radio"
-//             name="ordersDoctor"
-//             value="5"
-//             {...register("ordersDoctor")}
-//           />
-//         </label>
-//       </section>
-//       <section>
-//         <p>- чи надав лікар вичерпний коментар до своїх призначень?</p>
-//         <label>
-//           {" 1 "}
-//           <input
-//             type="radio"
-//             name="prescriptionDoctor"
-//             value="1"
-//             {...register("prescriptionDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 2 "}
-//           <input
-//             type="radio"
-//             name="prescriptionDoctor"
-//             value="2"
-//             {...register("prescriptionDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 3 "}
-//           <input
-//             type="radio"
-//             name="prescriptionDoctor"
-//             value="3"
-//             {...register("prescriptionDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 4 "}
-//           <input
-//             type="radio"
-//             name="prescriptionDoctor"
-//             value="4"
-//             {...register("prescriptionDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 5 "}
-//           <input
-//             type="radio"
-//             name="prescriptionDoctor"
-//             value="5"
-//             {...register("prescriptionDoctor")}
-//           />
-//         </label>
-//       </section>
-//       <section>
-//         <p>- чи був лікар ввічливим?</p>
-//         <label>
-//           {" 1 "}
-//           <input
-//             type="radio"
-//             name="respectfulDoctor"
-//             value="1"
-//             {...register("respectfulDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 2 "}
-//           <input
-//             type="radio"
-//             name="respectfulDoctor"
-//             value="2"
-//             {...register("respectfulDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 3 "}
-//           <input
-//             type="radio"
-//             name="respectfulDoctor"
-//             value="3"
-//             {...register("respectfulDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 4 "}
-//           <input
-//             type="radio"
-//             name="respectfulDoctor"
-//             value="4"
-//             {...register("respectfulDoctor")}
-//           />
-//         </label>
-//         <label>
-//           {" 5 "}
-//           <input
-//             type="radio"
-//             name="respectfulDoctor"
-//             value="5"
-//             {...register("respectfulDoctor")}
-//           />
-//         </label>
-//       </section>
-//       <h2>Оцініть порядок прийому та умови клініки:</h2>
-//       <section>
-//         <p>- чи був Ваш прийом добре організованим?</p>
-//         <label>
-//           {" 1 "}
-//           <input
-//             type="radio"
-//             name="clinicOrganisation"
-//             value="1"
-//             {...register("clinicOrganisation")}
-//           />
-//         </label>
-//         <label>
-//           {" 2 "}
-//           <input
-//             type="radio"
-//             name="clinicOrganisation"
-//             value="2"
-//             {...register("clinicOrganisation")}
-//           />
-//         </label>
-//         <label>
-//           {" 3 "}
-//           <input
-//             type="radio"
-//             name="clinicOrganisation"
-//             value="3"
-//             {...register("clinicOrganisation")}
-//           />
-//         </label>
-//         <label>
-//           {" 4 "}
-//           <input
-//             type="radio"
-//             name="clinicOrganisation"
-//             value="4"
-//             {...register("clinicOrganisation")}
-//           />
-//         </label>
-//         <label>
-//           {" 5 "}
-//           <input
-//             type="radio"
-//             name="clinicOrganisation"
-//             value="5"
-//             {...register("clinicOrganisation")}
-//           />
-//         </label>
-//       </section>
-//       <section>
-//         <p>- чи було Ваше перебування в клініці зручним?</p>
-//         <label>
-//           {" 1 "}
-//           <input
-//             type="radio"
-//             name="clinicStay"
-//             value="1"
-//             {...register("clinicStay")}
-//           />
-//         </label>
-//         <label>
-//           {" 2 "}
-//           <input
-//             type="radio"
-//             name="clinicStay"
-//             value="2"
-//             {...register("clinicStay")}
-//           />
-//         </label>
-//         <label>
-//           {" 3 "}
-//           <input
-//             type="radio"
-//             name="clinicStay"
-//             value="3"
-//             {...register("clinicStay")}
-//           />
-//         </label>
-//         <label>
-//           {" 4 "}
-//           <input
-//             type="radio"
-//             name="clinicStay"
-//             value="4"
-//             {...register("clinicStay")}
-//           />
-//         </label>
-//         <label>
-//           {" 5 "}
-//           <input
-//             type="radio"
-//             name="clinicStay"
-//             value="5"
-//             {...register("clinicStay")}
-//           />
-//         </label>
-//       </section>
+
 //
 //       <button type="submit">Отправить</button>
 //     </form>
@@ -582,10 +141,19 @@ import s from "./FeedbackForm.module.css";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
   // const [date, setDate] = useState(new Date());
   const [clinic, setClinic] = useState("");
+  const [registration, setRegistration] = useState("");
+  const [speedAdmin, setSpeedAdmin] = useState("");
+  const [niceAdmin, setNiceAdmin] = useState("");
+  const [carefulDoctor, setCarefulDoctor] = useState("");
+  const [ordersDoctor, setOrdersDoctor] = useState("");
+  const [prescriptionDoctor, setPrescriptionDoctor] = useState("");
+  const [respectfulDoctor, setRespectfulDoctor] = useState("");
+  const [clinicOrganisation, setClinicOrganisation] = useState("");
+  const [clinicStay, setClinicStay] = useState("");
   const [remark, setRemark] = useState("");
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
@@ -597,8 +165,8 @@ export default function ContactForm() {
         setName(value);
         break;
 
-      case "number":
-        setNumber(value);
+      case "email":
+        setEmail(value);
         break;
 
       case "date":
@@ -607,6 +175,42 @@ export default function ContactForm() {
 
       case "clinic":
         setClinic(value);
+        break;
+
+      case "registration":
+        setRegistration(value);
+        break;
+
+      case "speedAdmin":
+        setSpeedAdmin(value);
+        break;
+
+      case "niceAdmin":
+        setNiceAdmin(value);
+        break;
+
+      case "carefulDoctor":
+        setCarefulDoctor(value);
+        break;
+
+      case "ordersDoctor":
+        setOrdersDoctor(value);
+        break;
+
+      case "prescriptionDoctor":
+        setPrescriptionDoctor(value);
+        break;
+
+      case "respectfulDoctor":
+        setRespectfulDoctor(value);
+        break;
+
+      case "clinicOrganisation":
+        setClinicOrganisation(value);
+        break;
+
+      case "clinicStay":
+        setClinicStay(value);
         break;
 
       case "remark":
@@ -623,24 +227,75 @@ export default function ContactForm() {
       (contact) =>
         contact.name.toLocaleLowerCase() ===
           newContact.name.toLocaleLowerCase() ||
-        contacts.some((contact) => contact.number === newContact.number) ||
+        contacts.some((contact) => contact.email === newContact.email) ||
         contacts.some((contact) => contact.remark === newContact.remark) ||
         contacts.some((contact) => contact.clinic === newContact.clinic) ||
-        contacts.some((contact) => contact.date === newContact.date)
-    )
-      ? alert(
-          `Friend ${newContact.name} or number ${newContact.number} is alredy exist`
-        )
-      : dispatch(phonebookActions.addContact(newContact));
+        contacts.some((contact) => contact.date === newContact.date) ||
+        contacts.some(
+          (contact) => contact.registration === newContact.registration
+        ) ||
+        contacts.some(
+          (contact) => contact.speedAdmin === newContact.speedAdmin
+        ) ||
+        contacts.some(
+          (contact) => contact.niceAdmin === newContact.niceAdmin
+        ) ||
+        contacts.some(
+          (contact) => contact.carefulDoctor === newContact.carefulDoctor
+        ) ||
+        contacts.some(
+          (contact) => contact.ordersDoctor === newContact.ordersDoctor
+        ) ||
+        contacts.some(
+          (contact) =>
+            contact.prescriptionDoctor === newContact.prescriptionDoctor
+        ) ||
+        contacts.some(
+          (contact) => contact.respectfulDoctor === newContact.respectfulDoctor
+        ) ||
+        contacts.some(
+          (contact) =>
+            contact.clinicOrganisation === newContact.clinicOrganisation
+        ) ||
+        contacts.some((contact) => contact.clinicStay === newContact.clinicStay)
+    );
+    // ? alert(
+    //     `This ${newContact.name} or email ${newContact.email} is alredy exist`
+    //   )
+    dispatch(phonebookActions.addContact(newContact));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    checkExistAndAdd({ name, number, remark, date, clinic });
+    checkExistAndAdd({
+      name,
+      email,
+      remark,
+      date,
+      registration,
+      speedAdmin,
+      niceAdmin,
+      carefulDoctor,
+      ordersDoctor,
+      prescriptionDoctor,
+      respectfulDoctor,
+      clinicOrganisation,
+      clinicStay,
+      clinic,
+    });
     setName("");
-    setNumber("");
+    setEmail("");
     setDate("");
     setClinic("");
+    setRegistration("");
+    setSpeedAdmin("");
+    setNiceAdmin("");
+    setCarefulDoctor("");
+    setOrdersDoctor("");
+    setPrescriptionDoctor("");
+    setRespectfulDoctor("");
+    setClinicOrganisation("");
+    setClinicStay("");
     setRemark("");
   };
 
@@ -650,7 +305,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className={s.Form}>
       <label>
-        Name
+        Ваше ім’я та прізвище
         <input
           value={name}
           type="text"
@@ -658,26 +313,32 @@ export default function ContactForm() {
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
           required
+          placeholder="Ваше ім’я"
           onChange={handleContactData}
         />
       </label>
       <label>
-        Number
+        Ваш email
         <input
-          value={number}
-          type="tel"
-          name="number"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
+          value={email}
+          type="email"
+          name="email"
+          // pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+          // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          title="Email должен состоять с символом @"
           required
+          placeholder="user@mail.com"
           onChange={handleContactData}
         />
       </label>
+
       <section>
         <p>Дата останнього візиту в клініку:</p>
 
         <DatePicker
           value={date}
+          type="date"
           name="date"
           selected={date}
           // onChange={handleContactData}
@@ -687,17 +348,502 @@ export default function ContactForm() {
         />
       </section>
 
-      <select>
-        <option value={clinic} onChange={handleContactData}>
-          Виберіть адресу клініки
-        </option>
-        <option value={clinic} onChange={handleContactData}>
-          Ходосівка
-        </option>
-        <option value={clinic} onChange={handleContactData}>
-          Капітанівка
-        </option>
-      </select>
+      <label>
+        Виберіть адресу клініки
+        <select name="clinic" value={clinic} onChange={handleContactData}>
+          <option value="" disabled>
+            Виберіть адресу клініки
+          </option>
+          <option value="Hodosivka">Ходосівка</option>
+          <option value="Kapitanivka">Капітанівка</option>
+        </select>
+      </label>
+
+      <section>
+        <p>
+          Як швидко Вам вдалося зв’язатися з клінікою та/чи записатися на
+          прийом?
+        </p>
+        <label>
+          1
+          <input
+            type="radio"
+            name="registration"
+            value="1 of 5"
+            // checked={setRegistration === 1}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          2
+          <input
+            type="radio"
+            name="registration"
+            value="2 of 5"
+            // checked={setRegistration === 2}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          3
+          <input
+            type="radio"
+            name="registration"
+            value="3 of 5"
+            // checked={setRegistration === 3}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          4
+          <input
+            type="radio"
+            name="registration"
+            value="4 of 5"
+            // checked={setRegistration === 4}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          5
+          <input
+            type="radio"
+            name="registration"
+            value="5 of 5"
+            // checked={setRegistration === 5}
+            onChange={handleContactData}
+          />
+        </label>
+      </section>
+      <h2>Оцініть роботу рецепції:</h2>
+      <section>
+        <p>- швидкість та точність роботи адміністратора?</p>
+        <label>
+          1
+          <input
+            type="radio"
+            name="speedAdmin"
+            value="1 of 5"
+            // checked={setRegistration === 1}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          2
+          <input
+            type="radio"
+            name="speedAdmin"
+            value="2 of 5"
+            // checked={setRegistration === 2}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          {" 3 "}
+          <input
+            type="radio"
+            name="speedAdmin"
+            value="3 of 5"
+            // checked={setRegistration === 3}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          {" 4 "}
+          <input
+            type="radio"
+            name="speedAdmin"
+            value="4 of 5"
+            // checked={setRegistration === 4}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          {" 5 "}
+          <input
+            type="radio"
+            name="speedAdmin"
+            value="5 of 5"
+            // checked={setRegistration === 5}
+            onChange={handleContactData}
+          />
+        </label>
+      </section>
+
+      <section>
+        <p>- чи був адміністратор ввічливим?</p>
+        <label>
+          1
+          <input
+            type="radio"
+            name="niceAdmin"
+            value="1 of 5"
+            // checked={setRegistration === 1}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          2
+          <input
+            type="radio"
+            name="niceAdmin"
+            value="2 of 5"
+            // checked={setRegistration === 2}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          3
+          <input
+            type="radio"
+            name="niceAdmin"
+            value="3 of 5"
+            // checked={setRegistration === 3}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          4
+          <input
+            type="radio"
+            name="niceAdmin"
+            value="4 of 5"
+            // checked={setRegistration === 4}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          5
+          <input
+            type="radio"
+            name="niceAdmin"
+            value="5 of 5"
+            // checked={setRegistration === 5}
+            onChange={handleContactData}
+          />
+        </label>
+      </section>
+
+      <section>
+        <p>- чи був лікар уважним до Ваших скарг?</p>
+        <label>
+          1
+          <input
+            type="radio"
+            name="carefulDoctor"
+            value="1 of 5"
+            // checked={setRegistration === 1}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          2
+          <input
+            type="radio"
+            name="carefulDoctor"
+            value="2 of 5"
+            // checked={setRegistration === 2}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          3
+          <input
+            type="radio"
+            name="carefulDoctor"
+            value="3 of 5"
+            // checked={setRegistration === 3}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          4
+          <input
+            type="radio"
+            name="carefulDoctor"
+            value="4 of 5"
+            // checked={setRegistration === 4}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          5
+          <input
+            type="radio"
+            name="carefulDoctor"
+            value="5 of 5"
+            // checked={setRegistration === 5}
+            onChange={handleContactData}
+          />
+        </label>
+      </section>
+      <section>
+        <p>- чи надав лікар вичерпний коментар при оцінці Вашого стану?</p>
+        <label>
+          1
+          <input
+            type="radio"
+            name="ordersDoctor"
+            value="1 of 5"
+            // checked={setRegistration === 1}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          2
+          <input
+            type="radio"
+            name="ordersDoctor"
+            value="2 of 5"
+            // checked={setRegistration === 2}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          3
+          <input
+            type="radio"
+            name="ordersDoctor"
+            value="3 of 5"
+            // checked={setRegistration === 3}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          4
+          <input
+            type="radio"
+            name="ordersDoctor"
+            value="4 of 5"
+            // checked={setRegistration === 4}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          5
+          <input
+            type="radio"
+            name="ordersDoctor"
+            value="5 of 5"
+            // checked={setRegistration === 5}
+            onChange={handleContactData}
+          />
+        </label>
+      </section>
+      <section>
+        <p>- чи надав лікар вичерпний коментар до своїх призначень?</p>
+        <label>
+          1
+          <input
+            type="radio"
+            name="prescriptionDoctor"
+            value="1 of 5"
+            // checked={setRegistration === 1}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          2
+          <input
+            type="radio"
+            name="prescriptionDoctor"
+            value="2 of 5"
+            // checked={setRegistration === 2}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          3
+          <input
+            type="radio"
+            name="prescriptionDoctor"
+            value="3 of 5"
+            // checked={setRegistration === 3}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          4
+          <input
+            type="radio"
+            name="prescriptionDoctor"
+            value="4 of 5"
+            // checked={setRegistration === 4}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          5
+          <input
+            type="radio"
+            name="prescriptionDoctor"
+            value="5 of 5"
+            // checked={setRegistration === 5}
+            onChange={handleContactData}
+          />
+        </label>
+      </section>
+      <section>
+        <p>- чи був лікар ввічливим?</p>
+        <label>
+          1
+          <input
+            type="radio"
+            name="respectfulDoctor"
+            value="1 of 5"
+            // checked={setRegistration === 1}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          2
+          <input
+            type="radio"
+            name="respectfulDoctor"
+            value="2 of 5"
+            // checked={setRegistration === 2}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          3
+          <input
+            type="radio"
+            name="respectfulDoctor"
+            value="3 of 5"
+            // checked={setRegistration === 3}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          4
+          <input
+            type="radio"
+            name="respectfulDoctor"
+            value="4 of 5"
+            // checked={setRegistration === 4}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          5
+          <input
+            type="radio"
+            name="respectfulDoctor"
+            value="5 of 5"
+            // checked={setRegistration === 5}
+            onChange={handleContactData}
+          />
+        </label>
+      </section>
+      <h2>Оцініть порядок прийому та умови клініки:</h2>
+      <section>
+        <p>- чи був Ваш прийом добре організованим?</p>
+        <label>
+          1
+          <input
+            type="radio"
+            name="clinicOrganisation"
+            value="1 of 5"
+            // checked={setRegistration === 1}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          2
+          <input
+            type="radio"
+            name="clinicOrganisation"
+            value="2 of 5"
+            // checked={setRegistration === 2}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          3
+          <input
+            type="radio"
+            name="clinicOrganisation"
+            value="3 of 5"
+            // checked={setRegistration === 3}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          4
+          <input
+            type="radio"
+            name="clinicOrganisation"
+            value="4 of 5"
+            // checked={setRegistration === 4}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          5
+          <input
+            type="radio"
+            name="clinicOrganisation"
+            value="5 of 5"
+            // checked={setRegistration === 5}
+            onChange={handleContactData}
+          />
+        </label>
+      </section>
+      <section>
+        <p>- чи було Ваше перебування в клініці зручним?</p>
+        <label>
+          1
+          <input
+            type="radio"
+            name="clinicStay"
+            value="1 of 5"
+            // checked={setRegistration === 1}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          2
+          <input
+            type="radio"
+            name="clinicStay"
+            value="2 of 5"
+            // checked={setRegistration === 2}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          3
+          <input
+            type="radio"
+            name="clinicStay"
+            value="3 of 5"
+            // checked={setRegistration === 3}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          4
+          <input
+            type="radio"
+            name="clinicStay"
+            value="4 of 5"
+            // checked={setRegistration === 4}
+            onChange={handleContactData}
+          />
+        </label>
+        <label>
+          5
+          <input
+            type="radio"
+            name="clinicStay"
+            value="5 of 5"
+            // checked={setRegistration === 5}
+            onChange={handleContactData}
+          />
+        </label>
+      </section>
+
       <section>
         <h2>Маєте ще щось сказати? Лишіть Ваш коментар:</h2>
         <textarea
@@ -709,10 +855,8 @@ export default function ContactForm() {
           cols="55"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Коментар может состоять только из букв, апострофа, тире и пробелов."
-          // required
           placeholder="Будь ласка, лишіть Ваш коментар"
           onChange={handleContactData}
-          // {...register("comment")}
         ></textarea>
       </section>
       <button type="submit">Add contact</button>
