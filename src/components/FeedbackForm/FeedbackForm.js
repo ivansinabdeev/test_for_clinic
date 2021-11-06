@@ -138,6 +138,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import s from "./FeedbackForm.module.css";
+import { ImAngry, ImSad, ImNeutral, ImSmile, ImHappy } from "react-icons/im";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -365,7 +366,7 @@ export default function ContactForm() {
           прийом?
         </p>
         <label>
-          1
+          <ImAngry />
           <input
             type="radio"
             name="registration"
@@ -375,7 +376,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          2
+          <ImSad />
           <input
             type="radio"
             name="registration"
@@ -385,7 +386,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          3
+          <ImNeutral />
           <input
             type="radio"
             name="registration"
@@ -395,7 +396,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          4
+          <ImSmile />
           <input
             type="radio"
             name="registration"
@@ -405,7 +406,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          5
+          <ImHappy />
           <input
             type="radio"
             name="registration"
@@ -415,11 +416,12 @@ export default function ContactForm() {
           />
         </label>
       </section>
+
       <h2>Оцініть роботу рецепції:</h2>
       <section>
         <p>- швидкість та точність роботи адміністратора?</p>
         <label>
-          1
+          <ImAngry />
           <input
             type="radio"
             name="speedAdmin"
@@ -429,7 +431,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          2
+          <ImSad />
           <input
             type="radio"
             name="speedAdmin"
@@ -439,7 +441,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          {" 3 "}
+          <ImNeutral />
           <input
             type="radio"
             name="speedAdmin"
@@ -449,7 +451,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          {" 4 "}
+          <ImSmile />
           <input
             type="radio"
             name="speedAdmin"
@@ -459,7 +461,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          {" 5 "}
+          <ImHappy />
           <input
             type="radio"
             name="speedAdmin"
@@ -473,7 +475,7 @@ export default function ContactForm() {
       <section>
         <p>- чи був адміністратор ввічливим?</p>
         <label>
-          1
+          <ImAngry />
           <input
             type="radio"
             name="niceAdmin"
@@ -483,7 +485,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          2
+          <ImSad />
           <input
             type="radio"
             name="niceAdmin"
@@ -493,7 +495,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          3
+          <ImNeutral />
           <input
             type="radio"
             name="niceAdmin"
@@ -503,7 +505,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          4
+          <ImSmile />
           <input
             type="radio"
             name="niceAdmin"
@@ -513,7 +515,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          5
+          <ImHappy />
           <input
             type="radio"
             name="niceAdmin"
@@ -527,7 +529,7 @@ export default function ContactForm() {
       <section>
         <p>- чи був лікар уважним до Ваших скарг?</p>
         <label>
-          1
+          <ImAngry />
           <input
             type="radio"
             name="carefulDoctor"
@@ -537,7 +539,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          2
+          <ImSad />
           <input
             type="radio"
             name="carefulDoctor"
@@ -547,7 +549,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          3
+          <ImNeutral />
           <input
             type="radio"
             name="carefulDoctor"
@@ -557,7 +559,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          4
+          <ImSmile />
           <input
             type="radio"
             name="carefulDoctor"
@@ -567,7 +569,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          5
+          <ImHappy />
           <input
             type="radio"
             name="carefulDoctor"
@@ -577,10 +579,11 @@ export default function ContactForm() {
           />
         </label>
       </section>
+
       <section>
         <p>- чи надав лікар вичерпний коментар при оцінці Вашого стану?</p>
         <label>
-          1
+          <ImAngry />
           <input
             type="radio"
             name="ordersDoctor"
@@ -590,7 +593,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          2
+          <ImSad />
           <input
             type="radio"
             name="ordersDoctor"
@@ -600,7 +603,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          3
+          <ImNeutral />
           <input
             type="radio"
             name="ordersDoctor"
@@ -610,7 +613,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          4
+          <ImSmile />
           <input
             type="radio"
             name="ordersDoctor"
@@ -620,7 +623,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          5
+          <ImHappy />
           <input
             type="radio"
             name="ordersDoctor"
@@ -630,10 +633,11 @@ export default function ContactForm() {
           />
         </label>
       </section>
+
       <section>
         <p>- чи надав лікар вичерпний коментар до своїх призначень?</p>
         <label>
-          1
+          <ImAngry />
           <input
             type="radio"
             name="prescriptionDoctor"
@@ -643,7 +647,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          2
+          <ImSad />
           <input
             type="radio"
             name="prescriptionDoctor"
@@ -653,7 +657,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          3
+          <ImNeutral />
           <input
             type="radio"
             name="prescriptionDoctor"
@@ -663,7 +667,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          4
+          <ImSmile />
           <input
             type="radio"
             name="prescriptionDoctor"
@@ -673,7 +677,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          5
+          <ImHappy />
           <input
             type="radio"
             name="prescriptionDoctor"
@@ -683,10 +687,11 @@ export default function ContactForm() {
           />
         </label>
       </section>
+
       <section>
         <p>- чи був лікар ввічливим?</p>
         <label>
-          1
+          <ImAngry />
           <input
             type="radio"
             name="respectfulDoctor"
@@ -696,7 +701,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          2
+          <ImSad />
           <input
             type="radio"
             name="respectfulDoctor"
@@ -706,7 +711,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          3
+          <ImNeutral />
           <input
             type="radio"
             name="respectfulDoctor"
@@ -716,7 +721,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          4
+          <ImSmile />
           <input
             type="radio"
             name="respectfulDoctor"
@@ -726,7 +731,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          5
+          <ImHappy />
           <input
             type="radio"
             name="respectfulDoctor"
@@ -736,11 +741,12 @@ export default function ContactForm() {
           />
         </label>
       </section>
+
       <h2>Оцініть порядок прийому та умови клініки:</h2>
       <section>
         <p>- чи був Ваш прийом добре організованим?</p>
         <label>
-          1
+          <ImAngry />
           <input
             type="radio"
             name="clinicOrganisation"
@@ -750,7 +756,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          2
+          <ImSad />
           <input
             type="radio"
             name="clinicOrganisation"
@@ -760,7 +766,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          3
+          <ImNeutral />
           <input
             type="radio"
             name="clinicOrganisation"
@@ -770,7 +776,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          4
+          <ImSmile />
           <input
             type="radio"
             name="clinicOrganisation"
@@ -780,7 +786,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          5
+          <ImHappy />
           <input
             type="radio"
             name="clinicOrganisation"
@@ -790,10 +796,11 @@ export default function ContactForm() {
           />
         </label>
       </section>
+
       <section>
         <p>- чи було Ваше перебування в клініці зручним?</p>
         <label>
-          1
+          <ImAngry />
           <input
             type="radio"
             name="clinicStay"
@@ -803,7 +810,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          2
+          <ImSad />
           <input
             type="radio"
             name="clinicStay"
@@ -813,7 +820,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          3
+          <ImNeutral />
           <input
             type="radio"
             name="clinicStay"
@@ -823,7 +830,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          4
+          <ImSmile />
           <input
             type="radio"
             name="clinicStay"
@@ -833,7 +840,7 @@ export default function ContactForm() {
           />
         </label>
         <label>
-          5
+          <ImHappy />
           <input
             type="radio"
             name="clinicStay"
