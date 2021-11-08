@@ -137,13 +137,15 @@ import { getContacts } from "../../redux/comment/comment-selectors";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import s from "./FeedbackForm.module.css";
 import { ImAngry, ImSad, ImNeutral, ImSmile, ImHappy } from "react-icons/im";
+
+import s from "./FeedbackForm.module.css";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [date, setDate] = useState("");
+  // const [date, setDate] = useState("");
+  const [startDate, setStartDate] = useState(new Date());
   // const [date, setDate] = useState(new Date());
   const [clinic, setClinic] = useState("");
   const [registration, setRegistration] = useState("");
@@ -170,8 +172,8 @@ export default function ContactForm() {
         setEmail(value);
         break;
 
-      case "date":
-        setDate(value);
+      case "startDate":
+        setStartDate(value);
         break;
 
       case "clinic":
@@ -231,7 +233,9 @@ export default function ContactForm() {
         contacts.some((contact) => contact.email === newContact.email) ||
         contacts.some((contact) => contact.remark === newContact.remark) ||
         contacts.some((contact) => contact.clinic === newContact.clinic) ||
-        contacts.some((contact) => contact.date === newContact.date) ||
+        contacts.some(
+          (contact) => contact.startDate === newContact.startDate
+        ) ||
         contacts.some(
           (contact) => contact.registration === newContact.registration
         ) ||
@@ -272,7 +276,7 @@ export default function ContactForm() {
       name,
       email,
       remark,
-      date,
+      startDate,
       registration,
       speedAdmin,
       niceAdmin,
@@ -286,7 +290,7 @@ export default function ContactForm() {
     });
     setName("");
     setEmail("");
-    setDate("");
+    setStartDate("");
     setClinic("");
     setRegistration("");
     setSpeedAdmin("");
@@ -302,6 +306,12 @@ export default function ContactForm() {
 
   const handleCalendarClose = () => console.log("Calendar closed");
   const handleCalendarOpen = () => console.log("Calendar opened");
+
+  //   const handleChangeDate(date) => {
+  //   this.setState({
+  //     dueDate: date
+  //   }, () => console.log(this.state.dueDate)); // This will show the updated state when state is set.
+  // }
 
   return (
     <form onSubmit={handleSubmit} className={s.Form}>
@@ -338,12 +348,17 @@ export default function ContactForm() {
         <p>Дата останнього візиту в клініку:</p>
 
         <DatePicker
-          value={date}
+          value={startDate}
           type="date"
           name="date"
-          selected={date}
+          placeholder="Виберiть дату"
+          // selected={date}
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
           // onChange={handleContactData}
-          onChange={(date) => setDate(date)}
+          // onChange={(date) => setDate(date)}
+          isClearable
+          placeholderText="I have been cleared!"
           onCalendarClose={handleCalendarClose}
           onCalendarOpen={handleCalendarOpen}
         />
@@ -355,8 +370,8 @@ export default function ContactForm() {
           <option value="" disabled>
             Виберіть адресу клініки
           </option>
-          <option value="Hodosivka">Ходосівка</option>
-          <option value="Kapitanivka">Капітанівка</option>
+          <option value="Ходосівка">Ходосівка</option>
+          <option value="Капітанівка">Капітанівка</option>
         </select>
       </label>
 

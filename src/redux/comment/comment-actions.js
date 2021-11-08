@@ -25,7 +25,7 @@ const addContact = createAction("comment/add", (input) => ({
     name: input.name,
     email: input.email,
     remark: input.remark,
-    date: input.date,
+    startDate: input.startDate,
     clinic: input.clinic,
     registration: input.registration,
     speedAdmin: input.speedAdmin,

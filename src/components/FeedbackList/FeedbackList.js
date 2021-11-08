@@ -38,22 +38,25 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import phonebookActions from "../../redux/comment/comment-actions";
 import { getContacts, getFilter } from "../../redux/comment/comment-selectors";
+import Moment from "react-moment";
 
 export default function ContactList() {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
 
-  const filteredContacts = contacts.filter(({ name }) =>
-    name.toLowerCase().includes(filter.toLowerCase())
+  const filteredContacts = contacts.filter(({ clinic }) =>
+    clinic.toLowerCase().includes(filter.toLowerCase())
   );
   console.log(contacts);
+  // const dateToFormat = "1976-04-19T12:59-0500";
 
   return (
     <ul>
-      {filteredContacts.map(({ id, name, remark, date, clinic }) => (
+      {filteredContacts.map(({ id, name, remark, startDate, clinic }) => (
         <li key={id}>
-          {name} : {remark} : {date} :{clinic}
+          {name} : {remark} :<Moment format="YYYY/MM/DD">{startDate}</Moment> :
+          {clinic}
           <button
             // className={s.buttonDelete}
             type="button"
