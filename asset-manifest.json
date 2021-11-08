@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/test_for_clinic/static/css/main.fa6b13a8.chunk.css",
+    "main.js": "/test_for_clinic/static/js/main.9f4f6da5.chunk.js",
+    "main.js.map": "/test_for_clinic/static/js/main.9f4f6da5.chunk.js.map",
+    "runtime-main.js": "/test_for_clinic/static/js/runtime-main.ad21adc9.js",
+    "runtime-main.js.map": "/test_for_clinic/static/js/runtime-main.ad21adc9.js.map",
+    "static/css/2.ecdd39c8.chunk.css": "/test_for_clinic/static/css/2.ecdd39c8.chunk.css",
+    "static/js/2.0ad85581.chunk.js": "/test_for_clinic/static/js/2.0ad85581.chunk.js",
+    "static/js/2.0ad85581.chunk.js.map": "/test_for_clinic/static/js/2.0ad85581.chunk.js.map",
+    "index.html": "/test_for_clinic/index.html",
+    "static/css/2.ecdd39c8.chunk.css.map": "/test_for_clinic/static/css/2.ecdd39c8.chunk.css.map",
+    "static/css/main.fa6b13a8.chunk.css.map": "/test_for_clinic/static/css/main.fa6b13a8.chunk.css.map",
+    "static/js/2.0ad85581.chunk.js.LICENSE.txt": "/test_for_clinic/static/js/2.0ad85581.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad21adc9.js",
+    "static/css/2.ecdd39c8.chunk.css",
+    "static/js/2.0ad85581.chunk.js",
+    "static/css/main.fa6b13a8.chunk.css",
+    "static/js/main.9f4f6da5.chunk.js"
+  ]
+}
