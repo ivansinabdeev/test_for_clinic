@@ -106,22 +106,6 @@
 //         <option value="Kapitanivka">Капітанівка</option>
 //       </select>
 
-//       <h2>Оцініть роботу лікаря:</h2>
-//       <label>
-//         Зазначте ПІБ лікаря
-//         <input
-//           // value={name}
-//           type="text"
-//           name="nameDoctor"
-//           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-//           title="Имя может состоять только из букв, апострофа, тире и пробелов."
-//           required
-//           placeholder="ПІБ лікаря"
-//           // onChange={handleContactData}
-//           {...register("nameDoctor")}
-//         />
-//       </label>
-
 //
 //       <button type="submit">Отправить</button>
 //     </form>
@@ -151,6 +135,7 @@ export default function ContactForm() {
   const [registration, setRegistration] = useState("");
   const [speedAdmin, setSpeedAdmin] = useState("");
   const [niceAdmin, setNiceAdmin] = useState("");
+  const [nameDoctor, setNameDoctor] = useState("");
   const [carefulDoctor, setCarefulDoctor] = useState("");
   const [ordersDoctor, setOrdersDoctor] = useState("");
   const [prescriptionDoctor, setPrescriptionDoctor] = useState("");
@@ -190,6 +175,10 @@ export default function ContactForm() {
 
       case "niceAdmin":
         setNiceAdmin(value);
+        break;
+
+      case "nameDoctor":
+        setNameDoctor(value);
         break;
 
       case "carefulDoctor":
@@ -246,6 +235,9 @@ export default function ContactForm() {
           (contact) => contact.niceAdmin === newContact.niceAdmin
         ) ||
         contacts.some(
+          (contact) => contact.nameDoctor === newContact.nameDoctor
+        ) ||
+        contacts.some(
           (contact) => contact.carefulDoctor === newContact.carefulDoctor
         ) ||
         contacts.some(
@@ -280,6 +272,7 @@ export default function ContactForm() {
       registration,
       speedAdmin,
       niceAdmin,
+      nameDoctor,
       carefulDoctor,
       ordersDoctor,
       prescriptionDoctor,
@@ -295,6 +288,7 @@ export default function ContactForm() {
     setRegistration("");
     setSpeedAdmin("");
     setNiceAdmin("");
+    setNameDoctor("");
     setCarefulDoctor("");
     setOrdersDoctor("");
     setPrescriptionDoctor("");
@@ -307,14 +301,8 @@ export default function ContactForm() {
   const handleCalendarClose = () => console.log("Calendar closed");
   const handleCalendarOpen = () => console.log("Calendar opened");
 
-  //   const handleChangeDate(date) => {
-  //   this.setState({
-  //     dueDate: date
-  //   }, () => console.log(this.state.dueDate)); // This will show the updated state when state is set.
-  // }
-
   return (
-    <form onSubmit={handleSubmit} className={s.Form}>
+    <form onSubmit={handleSubmit} className={s.form}>
       <label>
         Ваше ім’я та прізвище
         <input
@@ -364,9 +352,14 @@ export default function ContactForm() {
         />
       </section>
 
-      <label>
+      <label className={s.clinic}>
         Виберіть адресу клініки
-        <select name="clinic" value={clinic} onChange={handleContactData}>
+        <select
+          className={s.clinicSelect}
+          name="clinic"
+          value={clinic}
+          onChange={handleContactData}
+        >
           <option value="" disabled>
             Виберіть адресу клініки
           </option>
@@ -375,12 +368,12 @@ export default function ContactForm() {
         </select>
       </label>
 
-      <section>
+      <section className={s.radioSection}>
         <p>
           Як швидко Вам вдалося зв’язатися з клінікою та/чи записатися на
           прийом?
         </p>
-        <label>
+        <label className={s.radioGroup}>
           <ImAngry />
           <input
             type="radio"
@@ -390,7 +383,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSad />
           <input
             type="radio"
@@ -400,7 +393,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImNeutral />
           <input
             type="radio"
@@ -410,7 +403,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSmile />
           <input
             type="radio"
@@ -420,7 +413,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImHappy />
           <input
             type="radio"
@@ -432,10 +425,10 @@ export default function ContactForm() {
         </label>
       </section>
 
-      <h2>Оцініть роботу рецепції:</h2>
-      <section>
+      <h2 className={s.title}>Оцініть роботу рецепції:</h2>
+      <section className={s.radioSection}>
         <p>- швидкість та точність роботи адміністратора?</p>
-        <label>
+        <label className={s.radioGroup}>
           <ImAngry />
           <input
             type="radio"
@@ -445,7 +438,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSad />
           <input
             type="radio"
@@ -455,7 +448,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImNeutral />
           <input
             type="radio"
@@ -465,7 +458,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSmile />
           <input
             type="radio"
@@ -475,7 +468,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImHappy />
           <input
             type="radio"
@@ -487,9 +480,9 @@ export default function ContactForm() {
         </label>
       </section>
 
-      <section>
+      <section className={s.radioSection}>
         <p>- чи був адміністратор ввічливим?</p>
-        <label>
+        <label className={s.radioGroup}>
           <ImAngry />
           <input
             type="radio"
@@ -499,7 +492,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSad />
           <input
             type="radio"
@@ -509,7 +502,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImNeutral />
           <input
             type="radio"
@@ -519,7 +512,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSmile />
           <input
             type="radio"
@@ -529,7 +522,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImHappy />
           <input
             type="radio"
@@ -540,10 +533,23 @@ export default function ContactForm() {
           />
         </label>
       </section>
-
-      <section>
+      <h2 className={s.title}>Оцініть роботу лікаря:</h2>
+      <label>
+        Зазначте ПІБ лікаря
+        <input
+          value={name}
+          type="text"
+          name="nameDoctor"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Имя может состоять только из букв, апострофа, тире и пробелов."
+          required
+          placeholder="ПІБ лікаря"
+          onChange={handleContactData}
+        />
+      </label>
+      <section className={s.radioSection}>
         <p>- чи був лікар уважним до Ваших скарг?</p>
-        <label>
+        <label className={s.radioGroup}>
           <ImAngry />
           <input
             type="radio"
@@ -553,7 +559,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSad />
           <input
             type="radio"
@@ -563,7 +569,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImNeutral />
           <input
             type="radio"
@@ -573,7 +579,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSmile />
           <input
             type="radio"
@@ -583,7 +589,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImHappy />
           <input
             type="radio"
@@ -595,9 +601,9 @@ export default function ContactForm() {
         </label>
       </section>
 
-      <section>
+      <section className={s.radioSection}>
         <p>- чи надав лікар вичерпний коментар при оцінці Вашого стану?</p>
-        <label>
+        <label className={s.radioGroup}>
           <ImAngry />
           <input
             type="radio"
@@ -607,7 +613,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSad />
           <input
             type="radio"
@@ -617,7 +623,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImNeutral />
           <input
             type="radio"
@@ -627,7 +633,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSmile />
           <input
             type="radio"
@@ -637,7 +643,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImHappy />
           <input
             type="radio"
@@ -649,9 +655,9 @@ export default function ContactForm() {
         </label>
       </section>
 
-      <section>
+      <section className={s.radioSection}>
         <p>- чи надав лікар вичерпний коментар до своїх призначень?</p>
-        <label>
+        <label className={s.radioGroup}>
           <ImAngry />
           <input
             type="radio"
@@ -661,7 +667,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSad />
           <input
             type="radio"
@@ -671,7 +677,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImNeutral />
           <input
             type="radio"
@@ -681,7 +687,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSmile />
           <input
             type="radio"
@@ -691,7 +697,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImHappy />
           <input
             type="radio"
@@ -703,9 +709,9 @@ export default function ContactForm() {
         </label>
       </section>
 
-      <section>
+      <section className={s.radioSection}>
         <p>- чи був лікар ввічливим?</p>
-        <label>
+        <label className={s.radioGroup}>
           <ImAngry />
           <input
             type="radio"
@@ -715,7 +721,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSad />
           <input
             type="radio"
@@ -725,7 +731,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImNeutral />
           <input
             type="radio"
@@ -735,7 +741,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSmile />
           <input
             type="radio"
@@ -745,7 +751,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImHappy />
           <input
             type="radio"
@@ -757,10 +763,10 @@ export default function ContactForm() {
         </label>
       </section>
 
-      <h2>Оцініть порядок прийому та умови клініки:</h2>
-      <section>
+      <h2 className={s.title}>Оцініть порядок прийому та умови клініки:</h2>
+      <section className={s.radioSection}>
         <p>- чи був Ваш прийом добре організованим?</p>
-        <label>
+        <label className={s.radioGroup}>
           <ImAngry />
           <input
             type="radio"
@@ -770,7 +776,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSad />
           <input
             type="radio"
@@ -780,7 +786,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImNeutral />
           <input
             type="radio"
@@ -790,7 +796,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSmile />
           <input
             type="radio"
@@ -800,7 +806,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImHappy />
           <input
             type="radio"
@@ -812,9 +818,9 @@ export default function ContactForm() {
         </label>
       </section>
 
-      <section>
+      <section className={s.radioSection}>
         <p>- чи було Ваше перебування в клініці зручним?</p>
-        <label>
+        <label className={s.radioGroup}>
           <ImAngry />
           <input
             type="radio"
@@ -824,7 +830,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSad />
           <input
             type="radio"
@@ -834,7 +840,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImNeutral />
           <input
             type="radio"
@@ -844,7 +850,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImSmile />
           <input
             type="radio"
@@ -854,7 +860,7 @@ export default function ContactForm() {
             onChange={handleContactData}
           />
         </label>
-        <label>
+        <label className={s.radioGroup}>
           <ImHappy />
           <input
             type="radio"
@@ -866,8 +872,8 @@ export default function ContactForm() {
         </label>
       </section>
 
-      <section>
-        <h2>Маєте ще щось сказати? Лишіть Ваш коментар:</h2>
+      <section className={s.radioSection}>
+        <h2 className={s.title}>Маєте ще щось сказати? Лишіть Ваш коментар:</h2>
         <textarea
           className={s.comment}
           value={remark}
@@ -881,7 +887,9 @@ export default function ContactForm() {
           onChange={handleContactData}
         ></textarea>
       </section>
-      <button type="submit">Add contact</button>
+      <button className={s.button} type="submit">
+        Додати вiдгук
+      </button>
     </form>
   );
 }

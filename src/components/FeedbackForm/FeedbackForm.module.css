@@ -1,8 +1,38 @@
-.Form {
+.form {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 .comment {
   resize: none;
+}
+.clinic {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+.clinicSelect {
+  margin-top: 10px;
+}
+.radioSection {
+  text-align: center;
+}
+.radioGroup {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+}
+.button {
+  margin: 10px;
+  width: 150px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  background-color: gray;
+}
+.title {
+  color: #61dafb;
 }

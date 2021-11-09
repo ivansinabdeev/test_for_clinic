@@ -3,7 +3,7 @@ import FeedbackForm from "../FeedbackForm/FeedbackForm";
 import Filter from "../Filter/Filter";
 import Modal from "../Modal/Modal";
 
-// import s from "./Buttons.module.css";
+import s from "./Buttons.module.css";
 
 class Buttons extends Component {
   state = {
@@ -19,28 +19,35 @@ class Buttons extends Component {
   render() {
     const { showModal } = this.state;
     return (
-      <nav>
-        <button>Напрямок</button>
-        <button>Лiкуючий лiкар</button>
-        <button type="button" onClick={this.toggleModal}>
+      <nav className={s.navigation}>
+        <button className={s.button}>Напрямок</button>
+        <button className={s.button}>Лiкуючий лiкар</button>
+        <button className={s.button} type="button" onClick={this.toggleModal}>
           Залишити вiдгук
         </button>
         {showModal && (
           <Modal>
             <FeedbackForm />
-            <button type="button" onClick={this.toggleModal}>
-              Закрити вiдгук
-            </button>
+            <div className={s.buttonClose}>
+              <button
+                className={s.button}
+                type="button"
+                onClick={this.toggleModal}
+              >
+                Закрити вiдгук
+              </button>
+            </div>
           </Modal>
         )}
         <button
+          className={s.button}
           onClick={() => {
             this.setState({ showed: !this.state.showed });
           }}
         >
           Клiнiка
         </button>
-        {this.state.showed ? <Filter /> : null}
+        <div className={s.filter}>{this.state.showed ? <Filter /> : null}</div>
       </nav>
     );
   }

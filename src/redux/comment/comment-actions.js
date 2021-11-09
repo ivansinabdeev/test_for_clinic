@@ -30,6 +30,7 @@ const addContact = createAction("comment/add", (input) => ({
     registration: input.registration,
     speedAdmin: input.speedAdmin,
     niceAdmin: input.niceAdmin,
+    nameDoctor: input.nameDoctor,
     carefulDoctor: input.carefulDoctor,
     ordersDoctor: input.ordersDoctor,
     prescriptionDoctor: input.prescriptionDoctor,
