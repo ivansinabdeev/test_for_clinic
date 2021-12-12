@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import FeedbackForm from "../FeedbackForm/FeedbackForm";
+// import FeedbackForm from "../FeedbackForm/FeedbackForm";
 import Filter from "../Filter/Filter";
-import Modal from "../Modal/Modal";
+// import Modal from "../Modal/Modal";
+import UniversalModal from "../UniversalModal/UniversalModal";
+import UniversalForm from "../UniversalForm/UniversalForm";
 
 import s from "./Buttons.module.css";
 
@@ -20,12 +22,28 @@ class Buttons extends Component {
     const { showModal } = this.state;
     return (
       <nav className={s.navigation}>
-        <button className={s.button}>Напрямок</button>
+        <button className={s.button} type="button" onClick={this.toggleModal}>
+          Тест модалки
+        </button>
+        {showModal && (
+          <UniversalModal>
+            <UniversalForm />
+            <div className={s.buttonClose}>
+              <button
+                className={s.button}
+                type="button"
+                onClick={this.toggleModal}
+              >
+                Закрити вiдгук
+              </button>
+            </div>
+          </UniversalModal>
+        )}
         <button className={s.button}>Лiкуючий лiкар</button>
         <button className={s.button} type="button" onClick={this.toggleModal}>
           Залишити вiдгук
         </button>
-        {showModal && (
+        {/* {showModal && (
           <Modal>
             <FeedbackForm />
             <div className={s.buttonClose}>
@@ -38,7 +56,7 @@ class Buttons extends Component {
               </button>
             </div>
           </Modal>
-        )}
+        )} */}
         <button
           className={s.button}
           onClick={() => {
