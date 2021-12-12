@@ -34,7 +34,7 @@ class Buttons extends Component {
                 type="button"
                 onClick={this.toggleModal}
               >
-                Закрити вiдгук
+                НЕТ
               </button>
             </div>
           </UniversalModal>
